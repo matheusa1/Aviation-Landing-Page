@@ -1,6 +1,6 @@
 import React from "react"
 import * as TC from "./styles"
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/logo.svg"
 
 export const Header: React.FC = () => {
   const [buttonSelected, setButtonSelected] = React.useState(0)

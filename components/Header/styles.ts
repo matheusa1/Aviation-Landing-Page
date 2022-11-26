@@ -28,7 +28,7 @@ export const Container = tw.div<any>`
   md:gap-3
 `
 
-export const LogoImage = tw(Image)`
+export const LogoImage = tw(Image)<any>`
   w-40
   h-9
 

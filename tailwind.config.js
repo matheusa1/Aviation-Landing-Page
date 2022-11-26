@@ -34,6 +34,7 @@ module.exports = {
     extend: {
       colors: {
         purplePrimary: "#313EF7",
+        textSubtitle: "#A7A7A7"
       },
       backgroundImage: {
         mapFooter: "url('/mapFooter.png')",
