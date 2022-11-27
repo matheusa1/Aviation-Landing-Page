@@ -1,4 +1,4 @@
-import * as TC from "./styles"
+import * as TC from "../styles/styles"
 
 import AirplaneImage from "../assets/airplane.svg"
 import AviationText from "../assets/AviationText.png"
