@@ -64,6 +64,8 @@ export const PlatformWrapper = tw(Link)<any>`
   cursor-pointer
 
   hover:opacity-75
+  active:bg-purplePrimary
+  active:opacity-75
 `
 
 export const PlatformFacebook = tw(FaFacebookF)`
@@ -112,10 +114,12 @@ export const TextLink = tw(Link)`
   text-textSubtitle
   font-normal
 
+  transition-transform
   duration-500
   ease-in-out
   hover:text-white
   hover:scale-110
+  active:text-purplePrimary
 `
 
 export const BottomSide = tw.div<any>`

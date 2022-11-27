@@ -19,7 +19,6 @@ export const Container = tw.div<any>`
   py-5
   px-28
   justify-between
-  bg-black
   items-center
   xl:px-20
   lg:px-10
@@ -28,12 +27,22 @@ export const Container = tw.div<any>`
   md:gap-3
 `
 
+export const LogoWrapper = tw(Link)<any>`
+
+`
+
 export const LogoImage = tw(Image)<any>`
   w-40
   h-9
 
   md:w-28
   md:h-6
+
+  transition
+  duration-500
+  ease-in-out
+  hover:scale-110
+  cursor:pointer
 `
 
 export const RightSide = tw.div<any>`

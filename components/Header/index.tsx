@@ -7,10 +7,12 @@ export const Header: React.FC = () => {
 
   return (
     <TC.Container>
-      <TC.LogoImage
-        src={Logo}
-        alt={"sim"}
-      />
+      <TC.LogoWrapper href={"/"}>
+        <TC.LogoImage
+          src={Logo}
+          alt={"sim"}
+        />
+      </TC.LogoWrapper>
       <TC.RightSide>
         <TC.MenuWrapper>
           <TC.MenuItem

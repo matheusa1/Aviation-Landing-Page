@@ -26,18 +26,22 @@ module.exports = {
 
       xs: { max: "490px" },
       // => @media (max-width: 490px) { ... }
-
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
     },
     extend: {
+      fontFamily: {
+        inter: ["Inter", "Montserrat", "sans-serif"],
+      },
       colors: {
         purplePrimary: "#313EF7",
-        textSubtitle: "#A7A7A7"
+        textSubtitle: "#A7A7A7",
       },
       backgroundImage: {
         mapFooter: "url('/mapFooter.png')",
+        gradientPage:
+          "radial-gradient(50% 50% at 50% 50%, rgba(18, 20, 78, 0.9) 0%, #010223 50%)",
       },
     },
   },
