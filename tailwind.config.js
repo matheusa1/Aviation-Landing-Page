@@ -32,11 +32,15 @@ module.exports = {
       sans: ["Montserrat", "sans-serif"],
     },
     extend: {
+      dropShadow: {
+        custom: "0px 10px 14px rgba(49, 62, 247, 0.25)",
+      },
       fontFamily: {
         inter: ["Inter", "Montserrat", "sans-serif"],
       },
       colors: {
         purplePrimary: "#313EF7",
+        hoverPurplePrimary: "#2833C9",
         textSubtitle: "#A7A7A7",
       },
       backgroundImage: {
