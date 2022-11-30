@@ -28,11 +28,18 @@ export const Title = tw.label<any>`
   font-semibold
   text-lg
 
+  transition-all
+  duration-500
+
   xl:text-base
   lg:text-lg
 `
 export const SubTitle = tw.label<any>`
   text-gray-400
   font-normal
+
+  transition-all
+  duration-500
+  
   xl:text-sm
 `

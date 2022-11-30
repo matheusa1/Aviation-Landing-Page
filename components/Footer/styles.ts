@@ -13,6 +13,9 @@ export const Container = tw.div<any>`
   flex
   flex-col
 
+  transition-all
+  duration-500
+
   xl:px-20
 `
 
@@ -23,6 +26,9 @@ export const TopSide = tw.div<any>`
   border-b-[rgba(255,255,255,0.1)]
   justify-between
 
+  transition-all
+  duration-500
+
   md:flex-col
   md:items-center
   md:gap-4
@@ -32,6 +38,9 @@ export const LeftSide = tw.div<any>`
   flex
   flex-col
   gap-6
+
+  transition-all
+  duration-500
 
   max-w-xs
   lg:max-w-[240px]
@@ -45,6 +54,10 @@ export const Logo = tw(Image)<any>``
 export const Text = tw.span`
   text-textSubtitle
   font-normal
+
+  transition-all
+  duration-500
+
   md:text-center
 `
 
@@ -87,6 +100,9 @@ export const RightSide = tw.div<any>`
   flex
   gap-52
 
+  transition-all
+  duration-500
+
   xl:gap-28
   lg:gap-14
 
@@ -103,16 +119,20 @@ export const Column = tw.div<any>`
 export const Title = tw.strong<any>`
   text-white
   text-2xl
+  mx-auto
 `
 export const TextsWrapper = tw.div<any>`
   flex
   flex-col
   gap-3
+  items-center
 `
 
 export const TextLink = tw(Link)`
   text-textSubtitle
   font-normal
+  text-center
+
 
   transition-transform
   duration-500
@@ -123,6 +143,9 @@ export const TextLink = tw(Link)`
 `
 
 export const BottomSide = tw.div<any>`
+transition-all
+duration-500
+
   py-8
   mt-2
   md:mt-0
