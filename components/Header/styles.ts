@@ -20,6 +20,10 @@ export const Container = tw.div<any>`
   px-28
   justify-between
   items-center
+
+  transition-all
+  duration-500
+
   xl:px-20
   lg:px-10
 
@@ -27,9 +31,7 @@ export const Container = tw.div<any>`
   md:gap-3
 `
 
-export const LogoWrapper = tw(Link)<any>`
-
-`
+export const LogoWrapper = tw(Link)<any>``
 
 export const LogoImage = tw(Image)<any>`
   w-40
@@ -52,6 +54,10 @@ export const RightSide = tw.div<any>`
   items-center
   justify-center
   gap-12
+
+  transition-all
+  duration-500
+
   lg:gap-6
   mdLg:gap-12
   md:gap-3
@@ -61,6 +67,10 @@ export const RightSide = tw.div<any>`
 export const MenuWrapper = tw.div<any>`
   flex
   gap-12
+
+  transition-all
+  duration-500
+
   lg:gap-6
   mdLg:gap-12
   md:gap-6
@@ -88,12 +98,18 @@ export const IconAllFlights = tw(IoAirplaneOutline)`
   h-10
   hidden
 
+  transition-all
+  duration-500
+
   mdLg:inline
 `
 export const IconSchedule = tw(AiOutlineSchedule)`
   w-10
   h-10
   hidden
+
+  transition-all
+  duration-500
 
   mdLg:inline
 `
@@ -102,12 +118,18 @@ export const IconPassengers = tw(BsPerson)`
   h-10
   hidden
 
+  transition-all
+  duration-500
+
   mdLg:inline
 `
 export const IconYourOrder = tw(IoTicketOutline)`
   w-10
   h-10
   hidden
+
+  transition-all
+  duration-500
 
   mdLg:inline
 // `

@@ -13,6 +13,7 @@ export const Button = tw.button<ButtonProps>`
   font-semibold
 
   hover:bg-hoverPurplePrimary
+  active:bg-activePurplePrimary
 
   drop-shadow-custom
 

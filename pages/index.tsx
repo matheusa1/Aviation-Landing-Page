@@ -7,12 +7,20 @@ import AviationText from "../assets/AviationText.png"
 import { CiLocationOn } from "react-icons/ci"
 import { BsPeople } from "react-icons/bs"
 import { HiOutlineCalendar } from "react-icons/hi"
+import { RiContactsBookLine } from "react-icons/ri"
+import { TbDiscount2 } from "react-icons/tb"
+import { BiLockOpenAlt } from "react-icons/bi"
+import { MdOutlineSupportAgent } from "react-icons/md"
 
 import { Button } from "../components/Button/styles"
 import { BookNowOptions } from "../components/BookNowOptions"
+import { FeatureItem } from "../components/FeatureItem"
 
 export default function Home() {
   const [bookNowOption, setBookNowOption] = useState(0)
+
+  const desc =
+    "Suspendisse ultrices nibh non cursus sagittis. Morbi dictum consequat ex, quis finibus magna."
 
   return (
     <TC.Container>
@@ -83,6 +91,37 @@ export default function Home() {
           </Button>
         </TC.BookNowContent>
       </TC.BookNowWrapper>
+      <TC.OurFeaturesWrapper>
+        <TC.Title>Our Features</TC.Title>
+        <TC.Features>
+          <FeatureItem
+            icon={<RiContactsBookLine className="h-10 w-10" />}
+            title={"Best Guide"}
+            description={desc}
+            link={"/"}
+            mt
+          />
+          <FeatureItem
+            icon={<TbDiscount2 className="h-10 w-10" />}
+            title={"More Discount"}
+            description={desc}
+            link={"/"}
+          />
+          <FeatureItem
+            icon={<BiLockOpenAlt className="h-10 w-10" />}
+            title={"Private"}
+            description={desc}
+            link={"/"}
+            mt
+          />
+          <FeatureItem
+            icon={<MdOutlineSupportAgent className="h-10 w-10" />}
+            title={"Online Support"}
+            description={desc}
+            link={"/"}
+          />
+        </TC.Features>
+      </TC.OurFeaturesWrapper>
     </TC.Container>
   )
 }

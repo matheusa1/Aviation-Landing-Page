@@ -37,6 +37,9 @@ export const Presentation = tw.div<any>`
   before:-z-10
   before:opacity-60
 
+  transition-all
+  duration-500
+
   xl:mx-6
 `
 
@@ -58,6 +61,9 @@ export const Text = tw.div<any>`
   capitalize
   mb-2
 
+  transition-all
+  duration-500
+
   md:text-3xl
   xs:text-xl
 `
@@ -77,6 +83,9 @@ export const BookNowWrapper = tw.div<any>`
   drop-shadow-2xl
   mb-28
 
+  transition-all
+  duration-500
+
   lg:mx-auto
   sm:mx-12
 `
@@ -86,6 +95,10 @@ export const BookNowOptions = tw.div<any>`
   flex
   rounded-t-2xl
   overflow-hidden
+
+  transition-all
+  duration-500
+
   sm:w-full
   xs:flex-col
 `
@@ -130,6 +143,39 @@ export const BookNowTop = tw.div<any>`
   justify-between
   w-full
 
+  transition-all
+  duration-500
+
   lg:flex-col
   lg:w-fit
+`
+export const OurFeaturesWrapper = tw.div<any>`
+  flex
+  flex-col
+  items-center
+  w-fit
+  mx-auto
+  gap-10
+  mb-24
+`
+
+export const Title = tw.div<any>`
+  text-[2.5rem]
+  font-bold
+`
+
+export const Features = tw.div<any>`
+  flex
+  gap-6
+  mx-auto
+
+  transition-all
+  duration-500
+
+  lg:grid
+  lg:grid-cols-2
+  lg-gap-3
+
+  xsSm:flex
+  xsSm:flex-col
 `
