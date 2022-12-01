@@ -5,6 +5,23 @@ interface BookNowOptionsProps {
   active?: 1 | 0
 }
 
+interface BgIconProps {
+  color: string
+}
+
+interface IconWrapperProps {
+  top?: string
+  left?: string
+  width?: string
+  height?: string
+}
+
+interface TitleProps {
+  textCenter?: boolean
+}
+
+const div = tw.div<any>``
+
 export const Container = tw.div<any>`
   flex
   flex-col
@@ -159,9 +176,11 @@ export const OurFeaturesWrapper = tw.div<any>`
   mb-24
 `
 
-export const Title = tw.div<any>`
+export const Title = tw.h1<TitleProps>`
   text-[2.5rem]
   font-bold
+
+  ${({ textCenter }) => textCenter && "text-center"}
 `
 
 export const Features = tw.div<any>`
@@ -178,4 +197,91 @@ export const Features = tw.div<any>`
 
   xsSm:flex
   xsSm:flex-col
+`
+
+export const LetsFlyWrapper = tw.div<any>`
+  flex
+  px-20
+  mb-24
+
+  items-center
+
+  lg:flex-col
+  lg:gap-10
+  xsSm:px-10
+`
+
+export const LetsFlyLeft = tw.div<any>`
+  w-1/2
+  flex
+  justify-center
+
+  lg:w-full
+`
+
+export const Img = tw(Image)`
+  min-width-[556px]
+  max-h-[461px]
+`
+
+export const LetsFlyRight = tw.div<any>`
+  w-1/2
+  flex
+  flex-col
+
+  items-center
+
+  lg:w-full
+`
+
+export const LetsFlyTop = tw.div<any>`
+  flex
+  w-full
+  gap-5
+  items-center
+  mb-4
+`
+
+export const LetsFlyText = tw.span<any>`
+  font-black
+  text-xl
+  text-purplePrimary
+  whitespace-nowrap
+`
+
+export const DashLine = tw.div<any>`
+  w-full
+  h-1/2
+  border-b-2
+  border-dashed
+`
+
+export const LetsFlyItems = tw.ul<any>`
+  my-10
+  flex
+  flex-col
+  gap-3
+  relative
+
+  before:content-[""]
+  before:absolute
+  before:top-2
+  before:left-[3px]
+  before:h-28
+  before:border-l-2
+  before:border-dashed
+`
+
+export const LetsFlyItem = tw.li<any>`
+  font-medium
+  relative
+  pl-3
+  before:content-[""]
+  before:absolute
+  before:w-2
+  before:h-2
+  before:bg-purplePrimary
+  before:top-1/4
+  before:rounded-full
+  before:left-0
 `
