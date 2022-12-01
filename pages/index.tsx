@@ -4,6 +4,8 @@ import * as TC from "../styles/styles"
 
 import AirplaneImage from "../assets/airplane.svg"
 import AviationText from "../assets/AviationText.png"
+import Sheesh from "../assets/sheesh.png"
+
 import { CiLocationOn } from "react-icons/ci"
 import { BsPeople } from "react-icons/bs"
 import { HiOutlineCalendar } from "react-icons/hi"
@@ -52,7 +54,7 @@ export default function Home() {
           <TC.BookNowOption
             onClick={() => setBookNowOption(1)}
             active={bookNowOption === 1 ? 1 : 0}>
-            Busniness
+            Business
           </TC.BookNowOption>
           <TC.BookNowOption
             onClick={() => setBookNowOption(2)}
@@ -122,6 +124,45 @@ export default function Home() {
           />
         </TC.Features>
       </TC.OurFeaturesWrapper>
+
+      <TC.LetsFlyWrapper>
+        <TC.LetsFlyLeft>
+          <TC.Img
+            src={Sheesh}
+            alt={""}
+          />
+        </TC.LetsFlyLeft>
+        <TC.LetsFlyRight>
+          <TC.LetsFlyTop>
+            <TC.LetsFlyText>Lets Fly</TC.LetsFlyText> <TC.DashLine />
+          </TC.LetsFlyTop>
+          <TC.Title textCenter>
+            It’s one of the leading online flight booking platforms in the world
+          </TC.Title>
+          <TC.LetsFlyItems>
+            <TC.LetsFlyItem>
+              Contrary to popular belief, Lorem Ipsum is not simply random text
+            </TC.LetsFlyItem>
+            <TC.LetsFlyItem>
+              If you are going to use a passage of Lorem Ipsum
+            </TC.LetsFlyItem>
+            <TC.LetsFlyItem>
+              Lorem Ipsum is therefore always free from repetition, injected
+              humour, or non-characteristic words etc.
+            </TC.LetsFlyItem>
+            <TC.LetsFlyItem>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </TC.LetsFlyItem>
+          </TC.LetsFlyItems>
+          <Button
+            px={10}
+            py={4}
+            shadow={1}>
+            Book Now
+          </Button>
+        </TC.LetsFlyRight>
+      </TC.LetsFlyWrapper>
     </TC.Container>
   )
 }

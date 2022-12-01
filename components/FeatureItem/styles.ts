@@ -3,7 +3,6 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs"
 import Link from "next/link"
 
 interface ContainerProps {
-  children: React.ReactNode
   mt: boolean
 }
 

@@ -12,6 +12,8 @@ export const Button = tw.button<ButtonProps>`
   rounded-full
   font-semibold
 
+  w-fit
+
   hover:bg-hoverPurplePrimary
   active:bg-activePurplePrimary
 
