@@ -17,6 +17,7 @@ export const Container = tw.div<any>`
   duration-500
 
   xl:px-20
+  xs:px-10
 `
 
 export const TopSide = tw.div<any>`

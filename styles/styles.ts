@@ -12,7 +12,12 @@ interface TitleProps {
 }
 
 interface SubTextProps {
+  textCenter?: boolean
   textSize?: boolean
+}
+
+interface SubTractProps {
+  left?: number
 }
 
 const div = tw.div<any>``
@@ -20,6 +25,7 @@ const div = tw.div<any>``
 export const Container = tw.div<any>`
   flex
   flex-col
+  overflow-hidden
 `
 
 export const Background = tw.div`
@@ -83,6 +89,7 @@ export const SubText = tw.div<SubTextProps>`
   font-inter
   font-normal
 
+  ${({ textCenter }) => textCenter && "text-center"}
   ${({ textSize }) => (textSize ? "text-base" : "text-xs")}
   md:text-center
 `
@@ -283,9 +290,16 @@ export const LetsFlyItem = tw.li<any>`
 `
 export const PopularTicketsWrapper = tw.div<any>`
   flex
+  items-center
+  justify-center
   py-12
   px-40
   bg-[#010223]
+
+  xl:flex-col
+  xl:gap-10
+  mdLg:px-20
+  xs:px-10
 `
 
 export const PopularTicketsLeft = tw.div<any>`
@@ -293,18 +307,29 @@ export const PopularTicketsLeft = tw.div<any>`
   flex-col
   gap-6
   w-1/2
+
+  xl:w-full
+  xl:items-center
 `
 
 export const PopularTicketsRight = tw.div<any>`
-  w-1/2
+  
   flex
+  justify-center
 `
 export const Ticket = tw.div<any>`
   flex
   flex-col
 
   w-96
+  shrink-0
   ml-24
+
+  relative
+
+  xl:ml-0
+  
+  xs:w-80
 `
 
 export const TicketTop = tw.div<any>`
@@ -314,6 +339,30 @@ export const TicketTop = tw.div<any>`
   flex
   flex-col
   gap-6
+  relative
+
+  border-b-[1px]
+  border-textSubtitle
+  border-dashed
+
+  before:content-[""]
+  before:absolute
+  before:w-8
+  before:h-8
+  before:-bottom-4
+  before:-left-4
+  before:bg-[#010223]
+  before:rounded-full
+
+
+  after:content-[""]
+  after:absolute
+  after:w-8
+  after:h-8
+  after:-bottom-4
+  after:-right-4
+  after:bg-[#010223]
+  after:rounded-full
 `
 export const TicketHeader = tw.div<any>`
   flex
@@ -346,10 +395,43 @@ export const TicketText = tw.span<any>`
   font-bold
 `
 
+export const TicketData = tw.div<any>`
+  grid
+  grid-cols-2
+  gap-4
+`
+
+export const TicketDataItem = tw.div<any>`
+  flex
+  flex-col
+  gap-1
+`
+
+export const TicketDataTitle = tw.div<any>`
+  font-medium
+  text-sm
+  text-textSubtitle
+`
+
+export const TicketDataInfo = tw.div<any>`
+  font-semibold
+  text-black
+`
+
 export const TicketBottom = tw.div<any>`
   bg-white
   py-7
   px-4
   rounded-b-2xl
-  h-10
+`
+
+export const SubTract = tw(Image)<SubTractProps>`
+  absolute
+  ${({ left }) => {
+    if (left === 5) {
+      return "left-5"
+    } else if (left === 10) {
+      return "left-10 top-5"
+    } else return "left-14 top-10"
+  }}
 `
