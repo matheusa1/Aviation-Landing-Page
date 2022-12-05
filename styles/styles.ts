@@ -5,19 +5,14 @@ interface BookNowOptionsProps {
   active?: 1 | 0
 }
 
-interface BgIconProps {
-  color: string
-}
-
-interface IconWrapperProps {
-  top?: string
-  left?: string
-  width?: string
-  height?: string
-}
-
 interface TitleProps {
   textCenter?: boolean
+  color?: "black" | string
+  textSize?: boolean
+}
+
+interface SubTextProps {
+  textSize?: boolean
 }
 
 const div = tw.div<any>``
@@ -69,8 +64,7 @@ export const PresentationText = tw(Image)<any>`
   absolute
   mt-5
 `
-export const AirplaneImage = tw(Image)<any>` 
-`
+
 export const Text = tw.div<any>`
   text-white
   font-bold
@@ -84,12 +78,12 @@ export const Text = tw.div<any>`
   md:text-3xl
   xs:text-xl
 `
-export const SubText = tw.div<any>`
+export const SubText = tw.div<SubTextProps>`
   text-[rgba(255,255,255,0.7)]
-  text-xs
   font-inter
   font-normal
 
+  ${({ textSize }) => (textSize ? "text-base" : "text-xs")}
   md:text-center
 `
 
@@ -177,10 +171,11 @@ export const OurFeaturesWrapper = tw.div<any>`
 `
 
 export const Title = tw.h1<TitleProps>`
-  text-[2.5rem]
   font-bold
 
+  ${({ textSize }) => (textSize ? `text-[40px]` : "text-[2.5rem]")}
   ${({ textCenter }) => textCenter && "text-center"}
+  ${({ color }) => color && `text-${color}`}
 `
 
 export const Features = tw.div<any>`
@@ -267,9 +262,10 @@ export const LetsFlyItems = tw.ul<any>`
   before:absolute
   before:top-2
   before:left-[3px]
-  before:h-28
+  before:h-[70%]
   before:border-l-2
   before:border-dashed
+  2xl:before:h-[80%]
 `
 
 export const LetsFlyItem = tw.li<any>`
@@ -284,4 +280,76 @@ export const LetsFlyItem = tw.li<any>`
   before:top-1/4
   before:rounded-full
   before:left-0
+`
+export const PopularTicketsWrapper = tw.div<any>`
+  flex
+  py-12
+  px-40
+  bg-[#010223]
+`
+
+export const PopularTicketsLeft = tw.div<any>`
+  flex
+  flex-col
+  gap-6
+  w-1/2
+`
+
+export const PopularTicketsRight = tw.div<any>`
+  w-1/2
+  flex
+`
+export const Ticket = tw.div<any>`
+  flex
+  flex-col
+
+  w-96
+  ml-24
+`
+
+export const TicketTop = tw.div<any>`
+  bg-white
+  p-7
+  rounded-t-2xl
+  flex
+  flex-col
+  gap-6
+`
+export const TicketHeader = tw.div<any>`
+  flex
+  justify-between
+`
+
+export const EconomySaver = tw.div<any>`
+  px-3
+  py-2
+  bg-[rgba(49,62,247,0.1)]
+  rounded-full
+`
+
+export const EconomySaverText = tw.span<any>`
+  font-medium
+  text-purplePrimary
+  whitespace-nowrap
+  opacity-100
+`
+
+export const HeaderLeft = tw.div<any>`
+  flex
+  font-semibold
+  gap-2
+  items-center
+  justify-center
+`
+
+export const TicketText = tw.span<any>`
+  font-bold
+`
+
+export const TicketBottom = tw.div<any>`
+  bg-white
+  py-7
+  px-4
+  rounded-b-2xl
+  h-10
 `
