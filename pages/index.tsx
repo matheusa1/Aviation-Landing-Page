@@ -4,7 +4,10 @@ import * as TC from "../styles/styles"
 
 import AirplaneImage from "../assets/airplane.svg"
 import AviationText from "../assets/AviationText.png"
-import Sheesh from "../assets/sheesh.png"
+import PicturesImage from "../assets/picturesImage.png"
+import AirDelivery from "../assets/AirDelivery.png"
+import BarCode from "../assets/barCode.png"
+import SubtractTicket from "../assets/subtractTicket.png"
 
 import { CiLocationOn } from "react-icons/ci"
 import { BsPeople } from "react-icons/bs"
@@ -13,10 +16,12 @@ import { RiContactsBookLine } from "react-icons/ri"
 import { TbDiscount2 } from "react-icons/tb"
 import { BiLockOpenAlt } from "react-icons/bi"
 import { MdOutlineSupportAgent } from "react-icons/md"
+import { CgAirplane } from "react-icons/cg"
 
 import { Button } from "../components/Button/styles"
 import { BookNowOptions } from "../components/BookNowOptions"
 import { FeatureItem } from "../components/FeatureItem"
+import Image from "next/image"
 
 export default function Home() {
   const [bookNowOption, setBookNowOption] = useState(0)
@@ -33,7 +38,7 @@ export default function Home() {
             alt="Presentation Text"
             src={AviationText}
           />
-          <TC.AirplaneImage
+          <Image
             alt="Airplane Image"
             src={AirplaneImage}
           />
@@ -128,7 +133,7 @@ export default function Home() {
       <TC.LetsFlyWrapper>
         <TC.LetsFlyLeft>
           <TC.Img
-            src={Sheesh}
+            src={PicturesImage}
             alt={""}
           />
         </TC.LetsFlyLeft>
@@ -163,6 +168,78 @@ export default function Home() {
           </Button>
         </TC.LetsFlyRight>
       </TC.LetsFlyWrapper>
+
+      <TC.PopularTicketsWrapper>
+        <TC.PopularTicketsLeft>
+          <TC.Title
+            textSize
+            textCenter
+            color="white">
+            Book Popular Flight Tickets
+          </TC.Title>
+          <TC.SubText textSize textCenter>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry&apos;s
+          </TC.SubText>
+          <Image
+            src={AirDelivery}
+            alt=""
+            className='shrink-0'
+          />
+        </TC.PopularTicketsLeft>
+        <TC.PopularTicketsRight>
+          <TC.Ticket>
+            <TC.TicketTop>
+              <TC.TicketHeader>
+                <TC.EconomySaver>
+                  <TC.EconomySaverText>Economy Saver</TC.EconomySaverText>
+                </TC.EconomySaver>
+                <TC.HeaderLeft>
+                  UK
+                  <CgAirplane className="h-6 w-6 text-purplePrimary" />
+                  BD
+                </TC.HeaderLeft>
+              </TC.TicketHeader>
+              <TC.TicketText>6 Flight Tickets</TC.TicketText>
+              <TC.TicketData>
+                <TC.TicketDataItem>
+                  <TC.TicketDataTitle>Passenger</TC.TicketDataTitle>
+                  <TC.TicketDataInfo>Raju Mullah</TC.TicketDataInfo>
+                </TC.TicketDataItem>
+                <TC.TicketDataItem>
+                  <TC.TicketDataTitle>Date</TC.TicketDataTitle>
+                  <TC.TicketDataInfo>20 Nov 2022</TC.TicketDataInfo>
+                </TC.TicketDataItem>
+                <TC.TicketDataItem>
+                  <TC.TicketDataTitle>Flight</TC.TicketDataTitle>
+                  <TC.TicketDataInfo>#5486626661</TC.TicketDataInfo>
+                </TC.TicketDataItem>
+                <TC.TicketDataItem>
+                  <TC.TicketDataTitle>Gate</TC.TicketDataTitle>
+                  <TC.TicketDataInfo>20 A</TC.TicketDataInfo>
+                </TC.TicketDataItem>
+                <TC.TicketDataItem>
+                  <TC.TicketDataTitle>Class</TC.TicketDataTitle>
+                  <TC.TicketDataInfo>Economy</TC.TicketDataInfo>
+                </TC.TicketDataItem>
+                <TC.TicketDataItem>
+                  <TC.TicketDataTitle>Seats</TC.TicketDataTitle>
+                  <TC.TicketDataInfo>5B - 11B</TC.TicketDataInfo>
+                </TC.TicketDataItem>
+              </TC.TicketData>
+            </TC.TicketTop>
+            <TC.TicketBottom>
+              <Image
+                src={BarCode}
+                alt={"BarCode"}
+              />
+            </TC.TicketBottom>
+            <TC.SubTract src={SubtractTicket} alt="" left={5} />
+            <TC.SubTract src={SubtractTicket} alt="" left={10}/>
+            <TC.SubTract src={SubtractTicket} alt="" left={1}/>
+          </TC.Ticket>
+        </TC.PopularTicketsRight>
+      </TC.PopularTicketsWrapper>
     </TC.Container>
   )
 }
