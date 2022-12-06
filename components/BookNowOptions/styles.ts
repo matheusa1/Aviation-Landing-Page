@@ -9,6 +9,8 @@ export const Container = tw.div<any>`
 
   rounded-xl
 
+  duration-300
+
   hover:bg-slate-100
   active:bg-slate-200
 `

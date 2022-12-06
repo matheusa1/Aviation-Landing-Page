@@ -6,14 +6,14 @@ interface BookNowOptionsProps {
 }
 
 interface TitleProps {
-  textCenter?: boolean
+  textcenter?: boolean
   color?: "black" | string
-  textSize?: boolean
+  textsize?: boolean
 }
 
 interface SubTextProps {
-  textCenter?: boolean
-  textSize?: boolean
+  textcenter?: boolean
+  textsize?: boolean
 }
 
 interface SubTractProps {
@@ -21,6 +21,7 @@ interface SubTractProps {
 }
 
 const div = tw.div<any>``
+const h1 = tw.h1<any>``
 
 export const Container = tw.div<any>`
   flex
@@ -84,13 +85,13 @@ export const Text = tw.div<any>`
   md:text-3xl
   xs:text-xl
 `
-export const SubText = tw.div<SubTextProps>`
+export const SubText = tw(div)<SubTextProps>`
   text-[rgba(255,255,255,0.7)]
   font-inter
   font-normal
 
-  ${({ textCenter }) => textCenter && "text-center"}
-  ${({ textSize }) => (textSize ? "text-base" : "text-xs")}
+  ${({ textcenter }) => textcenter && "text-center"}
+  ${({ textsize }) => (textsize ? "text-base" : "text-xs")}
   md:text-center
 `
 
@@ -177,11 +178,11 @@ export const OurFeaturesWrapper = tw.div<any>`
   mb-24
 `
 
-export const Title = tw.h1<TitleProps>`
+export const Title = tw(h1)<TitleProps>`
   font-bold
 
-  ${({ textSize }) => (textSize ? `text-[40px]` : "text-[2.5rem]")}
-  ${({ textCenter }) => textCenter && "text-center"}
+  ${({ textsize }) => (textsize ? `text-[40px]` : "text-[2.5rem]")}
+  ${({ textcenter }) => textcenter && "text-center"}
   ${({ color }) => color && `text-${color}`}
 `
 
@@ -292,9 +293,12 @@ export const PopularTicketsWrapper = tw.div<any>`
   flex
   items-center
   justify-center
-  py-12
+  pt-12
+  pb-24
   px-40
   bg-[#010223]
+
+
 
   xl:flex-col
   xl:gap-10
@@ -434,4 +438,27 @@ export const SubTract = tw(Image)<SubTractProps>`
       return "left-10 top-5"
     } else return "left-14 top-10"
   }}
+`
+
+export const BestTravelersWrapper = tw.div<any>`
+  flex
+  flex-col
+  gap-10
+  mt-24
+
+  px-20
+
+  items-center
+  mb-24
+
+  xsSm:px-10
+`
+
+export const BestTravelers = tw.div<any>`
+  grid
+  grid-cols-4
+  gap-6
+
+  xl:grid-cols-2
+  sm:grid-cols-1
 `

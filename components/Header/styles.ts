@@ -98,18 +98,12 @@ export const IconAllFlights = tw(IoAirplaneOutline)`
   h-10
   hidden
 
-  transition-all
-  duration-500
-
   mdLg:inline
 `
 export const IconSchedule = tw(AiOutlineSchedule)`
   w-10
   h-10
   hidden
-
-  transition-all
-  duration-500
 
   mdLg:inline
 `
@@ -118,18 +112,12 @@ export const IconPassengers = tw(BsPerson)`
   h-10
   hidden
 
-  transition-all
-  duration-500
-
   mdLg:inline
 `
 export const IconYourOrder = tw(IoTicketOutline)`
   w-10
   h-10
   hidden
-
-  transition-all
-  duration-500
 
   mdLg:inline
 // `

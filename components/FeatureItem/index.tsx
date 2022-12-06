@@ -5,7 +5,7 @@ interface FeatureItemProps {
   title: string
   description: string
   link: string
-  mt?: boolean
+  mt?: number
 }
 
 export const FeatureItem = ({
@@ -13,7 +13,7 @@ export const FeatureItem = ({
   title,
   description,
   link,
-  mt,
+  mt
 }: FeatureItemProps) => {
   return (
     <TC.Container mt={mt}>

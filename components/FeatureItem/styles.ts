@@ -3,7 +3,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs"
 import Link from "next/link"
 
 interface ContainerProps {
-  mt: boolean
+  mt?: boolean
 }
 
 const div = tw.div<any>``
@@ -19,7 +19,7 @@ export const Container = tw(div)<ContainerProps>`
   w-72
   h-fit
 
-  ${({ mt }) => mt && "mt-10"}
+  ${({ mt }) => mt === 1 && "mt-10"}
 
   duration-500
   hover:shadow-2xl

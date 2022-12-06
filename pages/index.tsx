@@ -8,6 +8,11 @@ import PicturesImage from "../assets/picturesImage.png"
 import AirDelivery from "../assets/AirDelivery.png"
 import BarCode from "../assets/barCode.png"
 import SubtractTicket from "../assets/subtractTicket.png"
+import Bg1 from "../assets/bg1.png"
+import Bg2 from "../assets/bg2.png"
+import A1 from "../assets/a1.png"
+import A2 from "../assets/a2.png"
+import A4 from "../assets/a4.png"
 
 import { CiLocationOn } from "react-icons/ci"
 import { BsPeople } from "react-icons/bs"
@@ -22,6 +27,7 @@ import { Button } from "../components/Button/styles"
 import { BookNowOptions } from "../components/BookNowOptions"
 import { FeatureItem } from "../components/FeatureItem"
 import Image from "next/image"
+import { BestTraveler } from "../components/BestTraveler"
 
 export default function Home() {
   const [bookNowOption, setBookNowOption] = useState(0)
@@ -106,7 +112,7 @@ export default function Home() {
             title={"Best Guide"}
             description={desc}
             link={"/"}
-            mt
+            mt={1}
           />
           <FeatureItem
             icon={<TbDiscount2 className="h-10 w-10" />}
@@ -119,7 +125,7 @@ export default function Home() {
             title={"Private"}
             description={desc}
             link={"/"}
-            mt
+            mt={1}
           />
           <FeatureItem
             icon={<MdOutlineSupportAgent className="h-10 w-10" />}
@@ -141,7 +147,7 @@ export default function Home() {
           <TC.LetsFlyTop>
             <TC.LetsFlyText>Lets Fly</TC.LetsFlyText> <TC.DashLine />
           </TC.LetsFlyTop>
-          <TC.Title textCenter>
+          <TC.Title textcenter={1}>
             It’s one of the leading online flight booking platforms in the world
           </TC.Title>
           <TC.LetsFlyItems>
@@ -172,19 +178,21 @@ export default function Home() {
       <TC.PopularTicketsWrapper>
         <TC.PopularTicketsLeft>
           <TC.Title
-            textSize
-            textCenter
+            textsize={1}
+            textcenter={1}
             color="white">
             Book Popular Flight Tickets
           </TC.Title>
-          <TC.SubText textSize textCenter>
+          <TC.SubText
+            textsize={1}
+            textcenter={1}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&apos;s
           </TC.SubText>
           <Image
             src={AirDelivery}
             alt=""
-            className='shrink-0'
+            className="shrink-0"
           />
         </TC.PopularTicketsLeft>
         <TC.PopularTicketsRight>
@@ -234,12 +242,54 @@ export default function Home() {
                 alt={"BarCode"}
               />
             </TC.TicketBottom>
-            <TC.SubTract src={SubtractTicket} alt="" left={5} />
-            <TC.SubTract src={SubtractTicket} alt="" left={10}/>
-            <TC.SubTract src={SubtractTicket} alt="" left={1}/>
+            <TC.SubTract
+              src={SubtractTicket}
+              alt=""
+              left={5}
+            />
+            <TC.SubTract
+              src={SubtractTicket}
+              alt=""
+              left={10}
+            />
+            <TC.SubTract
+              src={SubtractTicket}
+              alt=""
+              left={1}
+            />
           </TC.Ticket>
         </TC.PopularTicketsRight>
       </TC.PopularTicketsWrapper>
+
+      <TC.BestTravelersWrapper>
+        <TC.Title textcenter>Best Travelers Of This Month</TC.Title>
+        <TC.BestTravelers>
+          <BestTraveler
+            name={"Raju Mullah"}
+            desc={"@rajumulllah"}
+            bgImage={Bg1}
+            avatar={A1}
+          />
+          <BestTraveler
+            name={"Zaire Vetrovs"}
+            desc={"@zairevetrovs"}
+            bgImage={Bg2}
+            avatar={A2}
+          />
+          <BestTraveler
+            name={"Marcus Dias"}
+            desc={"@marcusdias"}
+            bgImage={Bg1}
+            avatar={A1}
+          />
+          <BestTraveler
+            name={"Davis Schleifer"}
+            desc={"@davisschleifer"}
+            bgImage={Bg2}
+            avatar={A4}
+          />
+        </TC.BestTravelers>
+      </TC.BestTravelersWrapper>
     </TC.Container>
   )
 }
