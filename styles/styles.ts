@@ -20,6 +20,10 @@ interface SubTractProps {
   left?: number
 }
 
+interface MakeMemoriesImageProps {
+  mt?: number
+}
+
 const div = tw.div<any>``
 const h1 = tw.h1<any>``
 
@@ -461,4 +465,42 @@ export const BestTravelers = tw.div<any>`
 
   xl:grid-cols-2
   sm:grid-cols-1
+`
+
+/////////////////////////////////////
+export const MakeMemoriesWrapper = tw.div<any>`
+  flex
+  flex-col
+  gap-10
+  px-10
+`
+
+export const MakeMemories = tw.div<any>`
+  flex
+  gap-12
+  px-20
+  justify-center
+`
+
+export const MakeMemoriesImage = tw(Image)<MakeMemoriesImageProps>`  
+  w-64
+  h-96
+
+  rounded-full
+
+  duration-300
+
+  hover:scale-105
+  hover:shadow-2xl
+
+  xl:w-60
+  xl:h-80
+
+  
+  ${({ mt }) => mt && `mt-12`}
+  
+  lg:mt-0
+  lg:w-64
+  lg:h-96
+
 `

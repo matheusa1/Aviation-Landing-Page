@@ -13,6 +13,10 @@ import Bg2 from "../assets/bg2.png"
 import A1 from "../assets/a1.png"
 import A2 from "../assets/a2.png"
 import A4 from "../assets/a4.png"
+import img1 from "../assets/img1.png"
+import img2 from "../assets/img2.png"
+import img3 from "../assets/img3.png"
+import img4 from "../assets/img4.png"
 
 import { CiLocationOn } from "react-icons/ci"
 import { BsPeople } from "react-icons/bs"
@@ -290,6 +294,30 @@ export default function Home() {
           />
         </TC.BestTravelers>
       </TC.BestTravelersWrapper>
+
+      <TC.MakeMemoriesWrapper>
+        <TC.Title textcenter={1}>Make memories with us</TC.Title>
+        <TC.Features>
+          <TC.MakeMemoriesImage
+            src={img1}
+            alt={""}
+          />
+          <TC.MakeMemoriesImage
+            src={img2}
+            alt={""}
+            mt={1}
+          />
+          <TC.MakeMemoriesImage
+            src={img3}
+            alt={""}
+          />
+          <TC.MakeMemoriesImage
+            src={img4}
+            alt={""}
+            mt={1}
+          />
+        </TC.Features>
+      </TC.MakeMemoriesWrapper>
     </TC.Container>
   )
 }
