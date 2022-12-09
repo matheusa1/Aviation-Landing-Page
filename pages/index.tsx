@@ -318,6 +318,23 @@ export default function Home() {
           />
         </TC.Features>
       </TC.MakeMemoriesWrapper>
+
+      <TC.NewsLetterWrapper>
+        <TC.Title textcenter={1}>
+          Subscribe Newsletter & get letest news
+        </TC.Title>
+        <TC.InputWrapper>
+          <TC.Input
+            type="text"
+            placeholder="Enter your email address"
+          />
+          <TC.InputButton
+            px={4}
+            py={2}>
+            Subscribe
+          </TC.InputButton>
+        </TC.InputWrapper>
+      </TC.NewsLetterWrapper>
     </TC.Container>
   )
 }
