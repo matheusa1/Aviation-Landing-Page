@@ -1,5 +1,6 @@
 import Image from "next/image"
 import tw from "tailwind-styled-components"
+import { Button } from "../components/Button/styles"
 
 interface BookNowOptionsProps {
   active?: 1 | 0
@@ -473,6 +474,8 @@ export const MakeMemoriesWrapper = tw.div<any>`
   flex-col
   gap-10
   px-10
+
+  mb-24
 `
 
 export const MakeMemories = tw.div<any>`
@@ -503,4 +506,46 @@ export const MakeMemoriesImage = tw(Image)<MakeMemoriesImageProps>`
   lg:w-64
   lg:h-96
 
+`
+
+export const NewsLetterWrapper = tw.div<any>`
+  bg-[rgba(49,62,247,0.05)]
+  px-[450px]
+  py-24
+  flex
+  flex-col
+  gap-10
+
+  items-center
+
+  xl:px-60
+  lg:px-40
+
+  md:px-10
+`
+
+export const InputWrapper = tw.div<any>`
+  relative
+  
+  sm:w-full
+`
+
+export const Input = tw.input`
+  px-6
+  py-5
+  rounded-full
+  w-[500px]
+  outline-0
+
+  text-xl
+
+  sm:w-full
+  sm:text-base
+`
+
+export const InputButton = tw(Button)<any>`
+  absolute
+  top-1/2
+  translate-y-[-50%]
+  right-3
 `
