@@ -1,4 +1,9 @@
 import { useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
+import "swiper/css/effect-cards"
+
+import { EffectCards } from "swiper"
 
 import * as TC from "../styles/styles"
 
@@ -304,21 +309,31 @@ export default function Home() {
         <TC.Title textcenter>Our Customer FeedBack</TC.Title>
         <TC.FeedBackBottomSide>
           <Image
+          className='lg:w-full lg:h-full mx-auto'
             src={MapFeedBack}
             alt={"FeedBacks Images"}
           />
           <TC.FeedBacks>
-            {Data.feedbacks.map((item, index) => {
-              return (
-                <FeedBackCard
-                  key={index}
-                  feedback={item.feedback}
-                  name={item.name}
-                  avatar={item.avatar}
-                  rate={item.rate}
-                />
-              )
-            })}
+            <Swiper
+              effect={"cards"}
+              grabCursor={true}
+              modules={[EffectCards]}
+              className="w-[500px] h-fit mx-auto sm:w-[300px] ">
+              {Data.feedbacks.map((item, index) => {
+                return (
+                  <SwiperSlide
+                    key={index}
+                    className="flex items-center justify-center rounded-2xl shadow-2xl">
+                    <FeedBackCard
+                      feedback={item.feedback}
+                      name={item.name}
+                      avatar={item.avatar}
+                      rate={item.rate}
+                    />
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
           </TC.FeedBacks>
         </TC.FeedBackBottomSide>
       </TC.FeedBackWrapper>

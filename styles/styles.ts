@@ -475,6 +475,10 @@ export const FeedBackWrapper = tw.div<any>`
   items-center
 
   px-32
+  mb-24
+
+  mdLg:px-14
+  xs:px-10
 `
 
 export const TextTop = tw.span`
@@ -488,11 +492,17 @@ export const FeedBackBottomSide = tw.div<any>`
   mt-16
   flex
   gap-10
+  w-full
   justify-center
+  items-center
+
+  xl:flex-col
+
 `
 
 export const FeedBacks = tw.div<any>`
   flex
+  mx-auto
 `
 
 export const MakeMemoriesWrapper = tw.div<any>`

@@ -4,12 +4,14 @@ export const CardWrapper = tw.div<any>`
   w-[500px]
   px-5
   py-8
-  shadow-lg
   gap-6
   flex
   flex-col
+  bg-white
 
   rounded-2xl
+
+  sm:w-[300px]
 `
 
 export const CardHeader = tw.div<any>`
