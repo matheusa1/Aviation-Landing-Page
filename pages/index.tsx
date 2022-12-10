@@ -33,6 +33,9 @@ import { BookNowOptions } from "../components/BookNowOptions"
 import { FeatureItem } from "../components/FeatureItem"
 import Image from "next/image"
 import { BestTraveler } from "../components/BestTraveler"
+import { FeedBackCard } from "../components/FeedBackCard"
+
+import * as Data from "../public/dataTemaplate/data.json"
 
 export default function Home() {
   const [bookNowOption, setBookNowOption] = useState(0)
@@ -304,7 +307,19 @@ export default function Home() {
             src={MapFeedBack}
             alt={"FeedBacks Images"}
           />
-          <TC.FeedBacks></TC.FeedBacks>
+          <TC.FeedBacks>
+            {Data.feedbacks.map((item, index) => {
+              return (
+                <FeedBackCard
+                  key={index}
+                  feedback={item.feedback}
+                  name={item.name}
+                  avatar={item.avatar}
+                  rate={item.rate}
+                />
+              )
+            })}
+          </TC.FeedBacks>
         </TC.FeedBackBottomSide>
       </TC.FeedBackWrapper>
 

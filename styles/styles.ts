@@ -487,10 +487,13 @@ export const TextTop = tw.span`
 export const FeedBackBottomSide = tw.div<any>`
   mt-16
   flex
-  gap-5
+  gap-10
+  justify-center
 `
 
-export const FeedBacks = tw.div<any>``
+export const FeedBacks = tw.div<any>`
+  flex
+`
 
 export const MakeMemoriesWrapper = tw.div<any>`
   flex

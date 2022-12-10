@@ -1,0 +1,25 @@
+{
+  "feedbacks": [
+    {
+      "id": 1,
+      "name": "Jaylon Vaccaro",
+      "avatar": "/dataTemaplate/images/feedbackImage1.png",
+      "rate": 4.3,
+      "feedback": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    },
+    {
+      "id": 1,
+      "name": "Jaylon Vaccaro",
+      "avatar": "/dataTemaplate/images/feedbackImage1.png",
+      "rate": 4.3,
+      "feedback": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    },
+    {
+      "id": 1,
+      "name": "Jaylon Vaccaro",
+      "avatar": "/dataTemaplate/images/feedbackImage1.png",
+      "rate": 4.3,
+      "feedback": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    }
+  ]
+}
