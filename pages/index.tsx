@@ -8,6 +8,7 @@ import PicturesImage from "../assets/picturesImage.png"
 import AirDelivery from "../assets/AirDelivery.png"
 import BarCode from "../assets/barCode.png"
 import SubtractTicket from "../assets/subtractTicket.png"
+import MapFeedBack from "../assets/MapFeedback.png"
 import Bg1 from "../assets/bg1.png"
 import Bg2 from "../assets/bg2.png"
 import A1 from "../assets/a1.png"
@@ -294,6 +295,18 @@ export default function Home() {
           />
         </TC.BestTravelers>
       </TC.BestTravelersWrapper>
+
+      <TC.FeedBackWrapper>
+        <TC.TextTop>What&apos;s our customer saying</TC.TextTop>
+        <TC.Title textcenter>Our Customer FeedBack</TC.Title>
+        <TC.FeedBackBottomSide>
+          <Image
+            src={MapFeedBack}
+            alt={"FeedBacks Images"}
+          />
+          <TC.FeedBacks></TC.FeedBacks>
+        </TC.FeedBackBottomSide>
+      </TC.FeedBackWrapper>
 
       <TC.MakeMemoriesWrapper>
         <TC.Title textcenter={1}>Make memories with us</TC.Title>
