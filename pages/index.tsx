@@ -1,4 +1,9 @@
 import { useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
+import "swiper/css/effect-cards"
+
+import { EffectCards } from "swiper"
 
 import * as TC from "../styles/styles"
 
@@ -8,6 +13,7 @@ import PicturesImage from "../assets/picturesImage.png"
 import AirDelivery from "../assets/AirDelivery.png"
 import BarCode from "../assets/barCode.png"
 import SubtractTicket from "../assets/subtractTicket.png"
+import MapFeedBack from "../assets/MapFeedback.png"
 import Bg1 from "../assets/bg1.png"
 import Bg2 from "../assets/bg2.png"
 import A1 from "../assets/a1.png"
@@ -32,6 +38,9 @@ import { BookNowOptions } from "../components/BookNowOptions"
 import { FeatureItem } from "../components/FeatureItem"
 import Image from "next/image"
 import { BestTraveler } from "../components/BestTraveler"
+import { FeedBackCard } from "../components/FeedBackCard"
+
+import * as Data from "../public/dataTemaplate/data.json"
 
 export default function Home() {
   const [bookNowOption, setBookNowOption] = useState(0)
@@ -294,6 +303,40 @@ export default function Home() {
           />
         </TC.BestTravelers>
       </TC.BestTravelersWrapper>
+
+      <TC.FeedBackWrapper>
+        <TC.TextTop>What&apos;s our customer saying</TC.TextTop>
+        <TC.Title textcenter>Our Customer FeedBack</TC.Title>
+        <TC.FeedBackBottomSide>
+          <Image
+          className='lg:w-full lg:h-full mx-auto'
+            src={MapFeedBack}
+            alt={"FeedBacks Images"}
+          />
+          <TC.FeedBacks>
+            <Swiper
+              effect={"cards"}
+              grabCursor={true}
+              modules={[EffectCards]}
+              className="w-[500px] h-fit mx-auto sm:w-[300px] ">
+              {Data.feedbacks.map((item, index) => {
+                return (
+                  <SwiperSlide
+                    key={index}
+                    className="flex items-center justify-center rounded-2xl shadow-2xl">
+                    <FeedBackCard
+                      feedback={item.feedback}
+                      name={item.name}
+                      avatar={item.avatar}
+                      rate={item.rate}
+                    />
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+          </TC.FeedBacks>
+        </TC.FeedBackBottomSide>
+      </TC.FeedBackWrapper>
 
       <TC.MakeMemoriesWrapper>
         <TC.Title textcenter={1}>Make memories with us</TC.Title>

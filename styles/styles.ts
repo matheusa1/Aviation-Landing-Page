@@ -468,7 +468,43 @@ export const BestTravelers = tw.div<any>`
   sm:grid-cols-1
 `
 
-/////////////////////////////////////
+export const FeedBackWrapper = tw.div<any>`
+  flex
+  flex-col
+
+  items-center
+
+  px-32
+  mb-24
+
+  mdLg:px-14
+  xs:px-10
+`
+
+export const TextTop = tw.span`
+  font-semibold
+  text-xl
+  text-purplePrimary
+  mb-4
+`
+
+export const FeedBackBottomSide = tw.div<any>`
+  mt-16
+  flex
+  gap-10
+  w-full
+  justify-center
+  items-center
+
+  xl:flex-col
+
+`
+
+export const FeedBacks = tw.div<any>`
+  flex
+  mx-auto
+`
+
 export const MakeMemoriesWrapper = tw.div<any>`
   flex
   flex-col
