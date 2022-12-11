@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/effect-cards"
 
-import { EffectCards } from "swiper"
+import { EffectCards, Autoplay } from "swiper"
 
 import * as TC from "../styles/styles"
 
@@ -309,16 +309,20 @@ export default function Home() {
         <TC.Title textcenter>Our Customer FeedBack</TC.Title>
         <TC.FeedBackBottomSide>
           <Image
-          className='lg:w-full lg:h-full mx-auto'
+            className="mx-auto lg:h-full lg:w-full"
             src={MapFeedBack}
             alt={"FeedBacks Images"}
           />
           <TC.FeedBacks>
             <Swiper
               effect={"cards"}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true
+              }}
               grabCursor={true}
-              modules={[EffectCards]}
-              className="w-[500px] h-fit mx-auto sm:w-[300px] ">
+              modules={[EffectCards, Autoplay]}
+              className="mx-auto h-fit w-[500px] sm:w-[300px] ">
               {Data.feedbacks.map((item, index) => {
                 return (
                   <SwiperSlide
@@ -334,6 +338,7 @@ export default function Home() {
                 )
               })}
             </Swiper>
+            <TC.FeedBacksText>Swipe the card &gt;&gt;</TC.FeedBacksText>
           </TC.FeedBacks>
         </TC.FeedBackBottomSide>
       </TC.FeedBackWrapper>

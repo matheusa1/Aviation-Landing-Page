@@ -503,6 +503,13 @@ export const FeedBackBottomSide = tw.div<any>`
 export const FeedBacks = tw.div<any>`
   flex
   mx-auto
+  flex-col
+  items-center
+  gap-12
+`
+
+export const FeedBacksText = tw.span`
+  text-textSubtitle
 `
 
 export const MakeMemoriesWrapper = tw.div<any>`
