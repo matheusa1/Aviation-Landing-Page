@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/effect-cards"
+import * as Popover from "@radix-ui/react-popover"
 
 import { EffectCards, Autoplay } from "swiper"
 
@@ -24,7 +25,7 @@ import img2 from "../assets/img2.png"
 import img3 from "../assets/img3.png"
 import img4 from "../assets/img4.png"
 
-import { CiLocationOn } from "react-icons/ci"
+import { GoLocation } from "react-icons/go"
 import { BsPeople } from "react-icons/bs"
 import { HiOutlineCalendar } from "react-icons/hi"
 import { RiContactsBookLine } from "react-icons/ri"
@@ -39,11 +40,15 @@ import { FeatureItem } from "../components/FeatureItem"
 import Image from "next/image"
 import { BestTraveler } from "../components/BestTraveler"
 import { FeedBackCard } from "../components/FeedBackCard"
+import { PopoverLocation } from "../components/PopoverLocation"
+import { PopoverGuest } from "../components/PopoverGuest"
 
-import * as Data from "../public/dataTemaplate/data.json"
+import Data from "../public/dataTemplate/data.json"
 
 export default function Home() {
   const [bookNowOption, setBookNowOption] = useState(0)
+  const [location, setLocation] = useState("")
+  const [guestName, setGuestName] = useState("")
 
   const desc =
     "Suspendisse ultrices nibh non cursus sagittis. Morbi dictum consequat ex, quis finibus magna."
@@ -88,16 +93,41 @@ export default function Home() {
         </TC.BookNowOptions>
         <TC.BookNowContent>
           <TC.BookNowTop>
-            <BookNowOptions
-              icon={<CiLocationOn className="h-6 w-6" />}
-              title={"Location"}
-              subTitle={"Where are you going?"}
-            />
-            <BookNowOptions
-              icon={<BsPeople className="h-6 w-6" />}
-              title={"Travelers"}
-              subTitle={"Add Guest"}
-            />
+            <Popover.Root>
+              <Popover.Trigger>
+                <BookNowOptions
+                  icon={<GoLocation className="h-6 w-6" />}
+                  title={"Location"}
+                  subTitle={location === "" ? "Where are you going?" : location}
+                />
+              </Popover.Trigger>
+              <Popover.Portal>
+                <Popover.Content>
+                  <PopoverLocation
+                    location={location}
+                    airports={Data.airports}
+                    setLocation={setLocation}
+                  />
+                </Popover.Content>
+              </Popover.Portal>
+            </Popover.Root>
+            <Popover.Root>
+              <Popover.Trigger>
+                <BookNowOptions
+                  icon={<BsPeople className="h-6 w-6" />}
+                  title={"Travelers"}
+                  subTitle={guestName == "" ? "Add Guest" : guestName}
+                />
+              </Popover.Trigger>
+              <Popover.Portal>
+                <Popover.Content>
+                  <PopoverGuest
+                    setGuestName={setGuestName}
+                    guestName={guestName}
+                  />
+                </Popover.Content>
+              </Popover.Portal>
+            </Popover.Root>
             <BookNowOptions
               icon={<HiOutlineCalendar className="h-6 w-6" />}
               title={"Check-in"}
@@ -160,7 +190,7 @@ export default function Home() {
           <TC.LetsFlyTop>
             <TC.LetsFlyText>Lets Fly</TC.LetsFlyText> <TC.DashLine />
           </TC.LetsFlyTop>
-          <TC.Title textcenter={1}>
+          <TC.Title text_center={1}>
             It’s one of the leading online flight booking platforms in the world
           </TC.Title>
           <TC.LetsFlyItems>
@@ -191,14 +221,14 @@ export default function Home() {
       <TC.PopularTicketsWrapper>
         <TC.PopularTicketsLeft>
           <TC.Title
-            textsize={1}
-            textcenter={1}
+            text_size={1}
+            text_center={1}
             color="white">
             Book Popular Flight Tickets
           </TC.Title>
           <TC.SubText
-            textsize={1}
-            textcenter={1}>
+            text_size={1}
+            text_center={1}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&apos;s
           </TC.SubText>
@@ -275,7 +305,7 @@ export default function Home() {
       </TC.PopularTicketsWrapper>
 
       <TC.BestTravelersWrapper>
-        <TC.Title textcenter>Best Travelers Of This Month</TC.Title>
+        <TC.Title text_center={1}>Best Travelers Of This Month</TC.Title>
         <TC.BestTravelers>
           <BestTraveler
             name={"Raju Mullah"}
@@ -306,7 +336,7 @@ export default function Home() {
 
       <TC.FeedBackWrapper>
         <TC.TextTop>What&apos;s our customer saying</TC.TextTop>
-        <TC.Title textcenter>Our Customer FeedBack</TC.Title>
+        <TC.Title text_center={1}>Our Customer FeedBack</TC.Title>
         <TC.FeedBackBottomSide>
           <Image
             className="mx-auto lg:h-full lg:w-full"
@@ -344,7 +374,7 @@ export default function Home() {
       </TC.FeedBackWrapper>
 
       <TC.MakeMemoriesWrapper>
-        <TC.Title textcenter={1}>Make memories with us</TC.Title>
+        <TC.Title text_center={1}>Make memories with us</TC.Title>
         <TC.Features>
           <TC.MakeMemoriesImage
             src={img1}
@@ -368,7 +398,7 @@ export default function Home() {
       </TC.MakeMemoriesWrapper>
 
       <TC.NewsLetterWrapper>
-        <TC.Title textcenter={1}>
+        <TC.Title text_center={1}>
           Subscribe Newsletter & get letest news
         </TC.Title>
         <TC.InputWrapper>

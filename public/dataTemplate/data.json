@@ -35,5 +35,31 @@
       "rate": 3.7,
       "feedback": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
     }
+  ],
+  "airports": [
+    {
+      "id": 1,
+      "name": "Aeroporto Internacional de Guarulhos"
+    },
+    {
+      "id": 2,
+      "name": "Aeroporto Internacional de Congonhas"
+    },
+    {
+      "id": 3,
+      "name": "Aeroporto Internacional de Viracopos"
+    },
+    {
+      "id": 4,
+      "name": "Aeroporto Internacional de Brasília"
+    },
+    {
+      "id": 5,
+      "name": "Aeroporto Internacional de Belo Horizonte"
+    },
+    {
+      "id": 6,
+      "name": "Aeroporto Internacional de Recife"
+    }
   ]
 }

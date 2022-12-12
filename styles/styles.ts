@@ -7,14 +7,14 @@ interface BookNowOptionsProps {
 }
 
 interface TitleProps {
-  textcenter?: boolean
+  text_center?: 1 | 0
   color?: "black" | string
-  textsize?: boolean
+  text_size?: 1 | 0
 }
 
 interface SubTextProps {
-  textcenter?: boolean
-  textsize?: boolean
+  text_center?: 1 | 0
+  text_size?: 1 | 0
 }
 
 interface SubTractProps {
@@ -26,7 +26,7 @@ interface MakeMemoriesImageProps {
 }
 
 const div = tw.div<any>``
-const h1 = tw.h1<any>``
+// const h1 = tw.h1<any>``
 
 export const Container = tw.div<any>`
   flex
@@ -90,13 +90,13 @@ export const Text = tw.div<any>`
   md:text-3xl
   xs:text-xl
 `
-export const SubText = tw(div)<SubTextProps>`
+export const SubText = tw.span<SubTextProps>`
   text-[rgba(255,255,255,0.7)]
   font-inter
   font-normal
 
-  ${({ textcenter }) => textcenter && "text-center"}
-  ${({ textsize }) => (textsize ? "text-base" : "text-xs")}
+  ${({ text_center }) => text_center && "text-center"}
+  ${({ text_size }) => (text_size ? "text-base" : "text-xs")}
   md:text-center
 `
 
@@ -163,14 +163,14 @@ export const BookNowContent = tw.div<any>`
 `
 
 export const BookNowTop = tw.div<any>`
-  flex
-  justify-between
   w-full
+  grid
+  grid-cols-4
 
   transition-all
   duration-500
 
-  lg:flex-col
+  lg:grid-cols-1
   lg:w-fit
 `
 export const OurFeaturesWrapper = tw.div<any>`
@@ -183,11 +183,11 @@ export const OurFeaturesWrapper = tw.div<any>`
   mb-24
 `
 
-export const Title = tw(h1)<TitleProps>`
+export const Title = tw.h1<TitleProps>`
   font-bold
 
-  ${({ textsize }) => (textsize ? `text-[40px]` : "text-[2.5rem]")}
-  ${({ textcenter }) => textcenter && "text-center"}
+  ${({ text_size }) => (text_size ? `text-[40px]` : "text-[2.5rem]")}
+  ${({ text_center }) => text_center && "text-center"}
   ${({ color }) => color && `text-${color}`}
 `
 

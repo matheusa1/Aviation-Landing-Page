@@ -9,11 +9,11 @@ interface BookNowOptionsProps {
 export const BookNowOptions = ({
   icon,
   title,
-  subTitle,
+  subTitle
 }: BookNowOptionsProps) => {
   return (
     <TC.Container>
-      <TC.Icon>{icon}</TC.Icon> 
+      <TC.Icon>{icon}</TC.Icon>
       <TC.Items>
         <TC.Title>{title}</TC.Title>
         <TC.SubTitle>{subTitle}</TC.SubTitle>
