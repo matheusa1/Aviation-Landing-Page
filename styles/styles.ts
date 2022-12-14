@@ -43,7 +43,7 @@ export const Background = tw.div`
   h-screen
   -z-50
 `
-export const Presentation = tw.div<any>`
+export const Presentation = tw.div  `
   relative
   flex
   flex-col
