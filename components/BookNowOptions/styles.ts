@@ -6,6 +6,9 @@ export const Container = tw.div<any>`
   gap-2
   px-5
   py-2
+  cursor-pointer
+
+  w-full
 
   rounded-xl
 
@@ -19,16 +22,19 @@ export const Icon = tw.div<any>`
   p-4
   bg-gray-200
   rounded-full
+  w-fit
 `
 
 export const Items = tw.div<any>`
   flex
   flex-col
+  w-full
 `
 
-export const Title = tw.label<any>`
+export const Title = tw.span<any>`  
   font-semibold
   text-lg
+  text-start
 
   transition-all
   duration-500
@@ -36,12 +42,15 @@ export const Title = tw.label<any>`
   xl:text-base
   lg:text-lg
 `
-export const SubTitle = tw.label<any>`
+export const SubTitle = tw.span<any>`
   text-gray-400
   font-normal
-
-  transition-all
-  duration-500
+  w-full
+  text-start
   
+  truncate
+
   xl:text-sm
+  pr-7
+  xs:pr-12
 `

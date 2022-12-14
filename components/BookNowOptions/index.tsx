@@ -1,23 +1,23 @@
-import * as TC from "./styles"
+import * as TC from './styles'
 
 interface BookNowOptionsProps {
-  icon: any
-  title: string
-  subTitle: string
+	icon: any
+	title: string
+	subTitle: string
 }
 
 export const BookNowOptions = ({
-  icon,
-  title,
-  subTitle,
+	icon,
+	title,
+	subTitle,
 }: BookNowOptionsProps) => {
-  return (
-    <TC.Container>
-      <TC.Icon>{icon}</TC.Icon> 
-      <TC.Items>
-        <TC.Title>{title}</TC.Title>
-        <TC.SubTitle>{subTitle}</TC.SubTitle>
-      </TC.Items>
-    </TC.Container>
-  )
+	return (
+		<TC.Container>
+			<TC.Icon>{icon}</TC.Icon>
+			<TC.Items>
+				<TC.Title>{title}</TC.Title>
+				<TC.SubTitle>{subTitle}</TC.SubTitle>
+			</TC.Items>
+		</TC.Container>
+	)
 }
