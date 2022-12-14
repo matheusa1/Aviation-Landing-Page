@@ -24,6 +24,7 @@ export const FeedBackCard = (props: FeedBackCardProps) => {
 					alt={''}
 					width={50}
 					height={50}
+					style={{ width: 'auto', height: 'auto' }}
 				/>
 				<TC.Info>
 					<TC.Name>{name}</TC.Name>

@@ -3,11 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import * as Popover from '@radix-ui/react-popover'
-import 'react-modern-calendar-datepicker/lib/DatePicker.css'
+import '@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css'
 import DatePicker, {
-	Calendar,
 	DayValue,
-} from 'react-modern-calendar-datepicker'
+} from '@hassanmojab/react-modern-calendar-datepicker'
 
 import { EffectCards, Autoplay } from 'swiper'
 
@@ -145,7 +144,11 @@ export default function Home() {
 								<BookNowOptions
 									icon={<HiOutlineCalendar className='h-6 w-6' />}
 									title={'Check-in'}
-									subTitle={'Add date'}
+									subTitle={
+										dayIn === undefined
+											? 'Add date'
+											: `${dayIn?.day}/${dayIn?.month}/${dayIn?.year}`
+									}
 								/>
 							</Popover.Trigger>
 							<Popover.Portal>
@@ -162,7 +165,11 @@ export default function Home() {
 								<BookNowOptions
 									icon={<HiOutlineCalendar className='h-6 w-6' />}
 									title={'Check-out'}
-									subTitle={'Add date'}
+									subTitle={
+										dayOut === undefined
+											? 'Add date'
+											: `${dayOut?.day}/${dayOut?.month}/${dayOut?.year}`
+									}
 								/>
 							</Popover.Trigger>
 							<Popover.Portal>
@@ -170,6 +177,7 @@ export default function Home() {
 									<PopoverCalendar
 										day={dayOut}
 										setDay={setDayOut}
+										minDate={dayIn ? dayIn : undefined}
 									/>
 								</Popover.Content>
 							</Popover.Portal>
