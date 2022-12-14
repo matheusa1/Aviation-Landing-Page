@@ -156,6 +156,7 @@ export default function Home() {
 									<PopoverCalendar
 										day={dayIn}
 										setDay={setDayIn}
+										dayInSelected
 									/>
 								</Popover.Content>
 							</Popover.Portal>
@@ -178,6 +179,7 @@ export default function Home() {
 										day={dayOut}
 										setDay={setDayOut}
 										minDate={dayIn ? dayIn : undefined}
+										dayInSelected={dayIn ? true : false}
 									/>
 								</Popover.Content>
 							</Popover.Portal>

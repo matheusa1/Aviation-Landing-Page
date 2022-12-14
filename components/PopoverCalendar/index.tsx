@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactElement, SetStateAction } from 'react'
+import React, { Dispatch, ReactElement, SetStateAction, useState } from 'react'
 import {
 	Calendar,
 	DayValue,
@@ -10,10 +10,12 @@ interface PopoverCalendarProps {
 	day: DayValue
 	setDay: Dispatch<SetStateAction<DayValue>>
 	minDate?: { year: number; month: number; day: number }
+	dayInSelected: boolean
 }
 
 export const PopoverCalendar = (props: PopoverCalendarProps): ReactElement => {
-	const { day, setDay, minDate } = props
+	const { day, setDay, minDate, dayInSelected } = props
+	const [alert, setAlert] = useState(false)
 
 	const min =
 		minDate !== undefined
@@ -26,9 +28,10 @@ export const PopoverCalendar = (props: PopoverCalendarProps): ReactElement => {
 
 	return (
 		<TC.Container>
+			{alert && <TC.Alert>Select Check-In first please</TC.Alert>}
 			<Calendar
 				value={day}
-				onChange={setDay}
+				onChange={dayInSelected ? setDay : () => setAlert(true)}
 				shouldHighlightWeekends
 				minimumDate={{
 					year: min.year,
