@@ -1,6 +1,6 @@
-import tw from "tailwind-styled-components"
+import tw from 'tailwind-styled-components'
 
-export const Container = tw.div<any>`
+export const Container = tw.div`
   flex
   items-center
   gap-2
@@ -18,20 +18,20 @@ export const Container = tw.div<any>`
   active:bg-slate-200
 `
 
-export const Icon = tw.div<any>`
+export const Icon = tw.div`
   p-4
   bg-gray-200
   rounded-full
   w-fit
 `
 
-export const Items = tw.div<any>`
+export const Items = tw.div`
   flex
   flex-col
   w-full
 `
 
-export const Title = tw.span<any>`  
+export const Title = tw.span`  
   font-semibold
   text-lg
   text-start
@@ -42,7 +42,7 @@ export const Title = tw.span<any>`
   xl:text-base
   lg:text-lg
 `
-export const SubTitle = tw.span<any>`
+export const SubTitle = tw.span`
   text-gray-400
   font-normal
   w-full

@@ -1,6 +1,6 @@
-import tw from "tailwind-styled-components"
+import tw from 'tailwind-styled-components'
 
-export const CardWrapper = tw.div<any>`
+export const CardWrapper = tw.div`
   w-[500px]
   px-5
   py-8
@@ -14,13 +14,13 @@ export const CardWrapper = tw.div<any>`
   sm:w-[300px]
 `
 
-export const CardHeader = tw.div<any>`
+export const CardHeader = tw.div`
   flex
   gap-4
   items-center
 `
 
-export const Info = tw.div<any>`
+export const Info = tw.div`
   flex
   flex-col
   gap-2
@@ -31,7 +31,7 @@ export const Name = tw.strong`
   text-xl
 `
 
-export const CardBody = tw.div<any>``
+export const CardBody = tw.div``
 
 export const FeedBack = tw.span`
   italic

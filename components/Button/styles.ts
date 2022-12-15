@@ -1,9 +1,9 @@
-import tw from "tailwind-styled-components"
+import tw from 'tailwind-styled-components'
 
 interface ButtonProps {
-  px?: number
-  py?: number
-  shadow?: 1 | 0
+	px?: number
+	py?: number
+	shadow?: 1 | 0
 }
 
 export const Button = tw.button<ButtonProps>`
@@ -19,6 +19,6 @@ export const Button = tw.button<ButtonProps>`
 
   drop-shadow-custom
 
-  ${({ px }) => (px ? `px-${px}` : "")}
-  ${({ py }) => (py ? `py-${py}` : "")}
+  ${({ px }) => (px ? `px-${px}` : '')}
+  ${({ py }) => (py ? `py-${py}` : '')}
 `

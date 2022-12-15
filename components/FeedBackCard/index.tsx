@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ReactElement } from 'react'
 import StarRatings from 'react-star-ratings'
 
 import * as TC from './styles'
@@ -10,7 +11,7 @@ interface FeedBackCardProps {
 	rate: number
 }
 
-export const FeedBackCard = (props: FeedBackCardProps) => {
+export const FeedBackCard = (props: FeedBackCardProps): ReactElement => {
 	const feedback = props.feedback
 	const name = props.name
 	const avatar = props.avatar

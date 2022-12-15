@@ -1,11 +1,9 @@
-import tw from "tailwind-styled-components"
+import tw from 'tailwind-styled-components'
 
-import Image from "next/image"
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import Link from 'next/link'
 
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa"
-import Link from "next/link"
-
-export const Container = tw.div<any>`
+export const Container = tw.div`
   bg-mapFooter
   px-28
   pt-24
@@ -20,7 +18,7 @@ export const Container = tw.div<any>`
   xs:px-10
 `
 
-export const TopSide = tw.div<any>`
+export const TopSide = tw.div`
   flex
   pb-10
   border-b-[3px]
@@ -35,7 +33,7 @@ export const TopSide = tw.div<any>`
   md:gap-4
 `
 
-export const LeftSide = tw.div<any>`
+export const LeftSide = tw.div`
   flex
   flex-col
   gap-6
@@ -50,8 +48,6 @@ export const LeftSide = tw.div<any>`
   xs:w-full
 `
 
-export const Logo = tw(Image)<any>``
-
 export const Text = tw.span`
   text-textSubtitle
   font-normal
@@ -62,12 +58,12 @@ export const Text = tw.span`
   md:text-center
 `
 
-export const Platforms = tw.div<any>`
+export const Platforms = tw.div`
   flex
   gap-4
 `
 
-export const PlatformWrapper = tw(Link)<any>`
+export const PlatformWrapper = tw(Link)`
   bg-white
   w-10
   h-10
@@ -97,7 +93,7 @@ export const PlatformTwitter = tw(FaTwitter)`
   h-5
 `
 
-export const RightSide = tw.div<any>`
+export const RightSide = tw.div`
   flex
   gap-52
 
@@ -111,18 +107,18 @@ export const RightSide = tw.div<any>`
   xs:gap-6
 `
 
-export const Column = tw.div<any>`
+export const Column = tw.div`
   flex
   flex-col
   gap-3
 `
 
-export const Title = tw.strong<any>`
+export const Title = tw.strong`
   text-white
   text-2xl
   mx-auto
 `
-export const TextsWrapper = tw.div<any>`
+export const TextsWrapper = tw.div`
   flex
   flex-col
   gap-3
@@ -143,7 +139,7 @@ export const TextLink = tw(Link)`
   active:text-purplePrimary
 `
 
-export const BottomSide = tw.div<any>`
+export const BottomSide = tw.div`
 transition-all
 duration-500
 

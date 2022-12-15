@@ -1,14 +1,11 @@
-import tw from "tailwind-styled-components"
-import { BsFillArrowRightCircleFill } from "react-icons/bs"
-import Link from "next/link"
+import tw from 'tailwind-styled-components'
+import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 
 interface ContainerProps {
-  mt?: boolean
+	mt?: number
 }
 
-const div = tw.div<any>``
-
-export const Container = tw(div)<ContainerProps>`
+export const Container = tw.div<ContainerProps>`
   px-7
   py-12
   flex
@@ -19,7 +16,7 @@ export const Container = tw(div)<ContainerProps>`
   w-72
   h-fit
 
-  ${({ mt }) => mt === 1 && "mt-10"}
+  ${({ mt }) => mt === 1 && 'mt-10'}
 
   duration-500
   hover:shadow-2xl
@@ -33,14 +30,14 @@ export const Container = tw(div)<ContainerProps>`
   lg:mt-0
 `
 
-export const IconWrapper = tw.div<any>`
+export const IconWrapper = tw.div`
   p-3
   rounded-full
   bg-gray-200
   mb-4
 `
 
-export const Title = tw.strong<any>`
+export const Title = tw.strong`
   text-2xl
   font-extrabold
   mb-2
@@ -48,16 +45,14 @@ export const Title = tw.strong<any>`
   xl:text-xl
 `
 
-export const Description = tw.span<any>`
+export const Description = tw.span`
   font-normal
   opacity-65
   text-center
   mb-8
 `
 
-export const Button = tw(Link)<any>``
-
-export const Icon = tw(BsFillArrowRightCircleFill)<any>`
+export const Icon = tw(BsFillArrowRightCircleFill)`
   w-12
   h-12
 

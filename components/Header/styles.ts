@@ -1,20 +1,18 @@
-import tw from "tailwind-styled-components"
+import tw from 'tailwind-styled-components'
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { AiOutlineSchedule } from "react-icons/ai"
-import { IoAirplaneOutline, IoTicketOutline } from "react-icons/io5"
-import { BsPerson } from "react-icons/bs"
+import { AiOutlineSchedule } from 'react-icons/ai'
+import { IoAirplaneOutline, IoTicketOutline } from 'react-icons/io5'
+import { BsPerson } from 'react-icons/bs'
 
 interface MenuItemsProps {
-  active: 1 | 0
-  onClick?: () => void
+	active: 1 | 0
+	onClick?: () => void
 }
 
-const div = tw.div<any>`` // temp-fix for tailwind-styled-components bug
-
-export const Container = tw.div<any>`
+export const Container = tw.div`
   flex
   py-5
   px-28
@@ -31,9 +29,7 @@ export const Container = tw.div<any>`
   md:gap-3
 `
 
-export const LogoWrapper = tw(Link)<any>``
-
-export const LogoImage = tw(Image)<any>`
+export const LogoImage = tw(Image)`
   w-40
   h-9
 
@@ -47,7 +43,7 @@ export const LogoImage = tw(Image)<any>`
   cursor:pointer
 `
 
-export const RightSide = tw.div<any>`
+export const RightSide = tw.div`
   text-white
   font-semibold
   flex
@@ -64,7 +60,7 @@ export const RightSide = tw.div<any>`
   xs:flex-col
 `
 
-export const MenuWrapper = tw.div<any>`
+export const MenuWrapper = tw.div`
   flex
   gap-12
 
@@ -76,7 +72,7 @@ export const MenuWrapper = tw.div<any>`
   md:gap-6
 `
 
-export const MenuItem = tw(div)<MenuItemsProps>`
+export const MenuItem = tw.div<MenuItemsProps>`
   h-12
   flex
   items-center
@@ -84,12 +80,12 @@ export const MenuItem = tw(div)<MenuItemsProps>`
   duration-500
   ease-in-out
   ${({ active }) =>
-    active && "border-b-2 border-purplePrimary text-purplePrimary"}
+		active && 'border-b-2 border-purplePrimary text-purplePrimary'}
   ${({ active }) =>
-    !active ? "hover:scale-110 cursor-pointer" : "cursor-default"}
+		!active ? 'hover:scale-110 cursor-pointer' : 'cursor-default'}
 `
 
-export const MenuItemTitle = tw.span<any>`
+export const MenuItemTitle = tw.span`
   mdLg:hidden
 `
 

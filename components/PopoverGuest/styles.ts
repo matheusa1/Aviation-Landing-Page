@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const Container = tw.div<any>`
+export const Container = tw.div`
   bg-slate-100
   shadow-xl
   rounded-2xl
