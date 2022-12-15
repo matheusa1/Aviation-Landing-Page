@@ -5,6 +5,7 @@ import {
 } from '@hassanmojab/react-modern-calendar-datepicker'
 
 import * as TC from './styles'
+import { Button } from '../Button/styles'
 
 interface PopoverCalendarProps {
 	day: DayValue
@@ -39,6 +40,17 @@ export const PopoverCalendar = (props: PopoverCalendarProps): ReactElement => {
 					day: min.day,
 				}}
 			/>
+			{day && (
+				<Button
+					px={4}
+					py={2}
+					onClick={() => {
+						setDay(undefined)
+					}}
+				>
+					Clear Data
+				</Button>
+			)}
 		</TC.Container>
 	)
 }

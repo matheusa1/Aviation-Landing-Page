@@ -77,3 +77,26 @@ export const BookNowTop = tw.div`
   lg:grid-cols-1
   lg:w-fit
 `
+
+export const Alert = tw.span`
+  text-red-500
+  text-sm
+  font-bold
+`
+
+export const ResultTicketsWrapper = tw.div`
+  flex
+  items-center
+  justify-center
+  mt-8
+  p-4
+  bg-[#010223]
+
+  rounded-2xl
+  w-fit
+  self-center
+
+  gap-10
+
+  lg:flex-col
+`
