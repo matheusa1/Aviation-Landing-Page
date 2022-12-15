@@ -1,6 +1,6 @@
-import tw from "tailwind-styled-components"
+import tw from 'tailwind-styled-components'
 
-export const Container = tw.div<any>`
+export const Container = tw.div`
   flex
   flex-col
   items-center
@@ -13,7 +13,7 @@ export const Container = tw.div<any>`
   hover:shadow-2xl
 `
 
-export const Bottom = tw.div<any>`
+export const Bottom = tw.div`
   relative
   h-44
 

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { ReactElement } from 'react'
 import * as TC from './styles'
 
 interface FeatureItemProps {
@@ -14,15 +16,15 @@ export const FeatureItem = ({
 	description,
 	link,
 	mt,
-}: FeatureItemProps) => {
+}: FeatureItemProps): ReactElement => {
 	return (
 		<TC.Container mt={mt}>
 			<TC.IconWrapper>{icon}</TC.IconWrapper>
 			<TC.Title>{title}</TC.Title>
 			<TC.Description>{description}</TC.Description>
-			<TC.Button href={link}>
+			<Link href={link}>
 				<TC.Icon />
-			</TC.Button>
+			</Link>
 		</TC.Container>
 	)
 }

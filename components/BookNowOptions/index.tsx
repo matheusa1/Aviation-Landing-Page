@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import * as TC from './styles'
 
 interface BookNowOptionsProps {
@@ -10,7 +11,7 @@ export const BookNowOptions = ({
 	icon,
 	title,
 	subTitle,
-}: BookNowOptionsProps) => {
+}: BookNowOptionsProps): ReactElement => {
 	return (
 		<TC.Container>
 			<TC.Icon>{icon}</TC.Icon>
